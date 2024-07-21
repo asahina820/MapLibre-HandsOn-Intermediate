@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>サンプル</title>
+    <meta name="description" content="サンプルです" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- MapLibre GL JS -->
+    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+    <!-- PMTiles -->
+    <script src="https://unpkg.com/pmtiles/dist/pmtiles.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="layerControl">
+      <span>レイヤ</span>
+      <div class="checkbox-container">
+        <input type="checkbox" id="background-osm-raster" class="checkbox" onchange="changeLayerVisibility(this)" checked />
+        <label for="background-osm-raster">OpenStreetMap</label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="hills" class="checkbox" onchange="changeLayerVisibility(this)" checked />
+        <label for="hills">陰影起伏</label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="bldg" class="checkbox" onchange="changeLayerVisibility(this)" checked />
+        <label for="bldg">PLATEAU 東京都23区建物データ</label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="amx-a-fude-polygon" class="checkbox" onchange="changeLayerVisibility(this)" checked />
+        <label for="amx-a-fude-polygon">登記所備付地図データ 間引きなし（ポリゴン）</label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="amx-a-fude-line" class="checkbox" onchange="changeLayerVisibility(this)" checked />
+        <label for="amx-a-fude-line">登記所備付地図データ 間引きなし（ライン）</label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="amx-a-daihyo" class="checkbox" onchange="changeLayerVisibility(this)" checked />
+        <label for="amx-a-daihyo">登記所備付地図データ 代表点レイヤ</label>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
